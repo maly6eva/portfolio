@@ -3,7 +3,8 @@ import React from 'react';
 
 
 type ButtonPropsType = {
-    button: string
+    button?: string
+    type?: string
 }
 
 export const Button = (props: ButtonPropsType) => {
