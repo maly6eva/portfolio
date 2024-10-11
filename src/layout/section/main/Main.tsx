@@ -40,7 +40,11 @@ const MainTitle = styled.h1`
 `
 
 const MainName = styled.h2`
-   
+    font-family: Roboto, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
 `
 
 const Photo = styled.img`
