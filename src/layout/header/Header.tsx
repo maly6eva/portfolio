@@ -3,24 +3,32 @@ import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {Container} from "../../components/Container";
 
 export const Header = () => {
     return (
         <StyledHeader>
-                <Logo/>
-                <Menu/>
-
+            <Container>
+                <FlexWrapper justify={'space-between'} align={'center'}>
+                    <Logo/>
+                    <Menu/>
+                </FlexWrapper>
+            </Container>
         </StyledHeader>
     );
 };
 
 
 const StyledHeader = styled.header`
-    display: flex;
-    justify-content: space-between;
-    z-index: 999;
-    
-    
+    padding-top: 14px;
+
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+  
+
+
 `
 
 

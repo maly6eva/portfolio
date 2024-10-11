@@ -51,4 +51,5 @@ const Copyright = styled.small``
 
 
 const FooterImg = styled.img`
-width: 100%`
+width: 100%
+`
