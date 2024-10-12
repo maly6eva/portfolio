@@ -21,14 +21,9 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     padding-top: 14px;
-
     position: absolute;
     z-index: 1;
     width: 100%;
-}
-  
-
-
 `
 
 

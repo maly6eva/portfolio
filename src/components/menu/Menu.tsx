@@ -44,7 +44,4 @@ const Link = styled.a`
     line-height: 28px;
     color: ${Theme.colors.spanCl};
     position: relative;
-
-    right: 120px;
-    
 `

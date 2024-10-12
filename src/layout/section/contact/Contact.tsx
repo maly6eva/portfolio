@@ -2,21 +2,25 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../main/Button";
+import {Container} from "../../../components/Container";
 
 export const Contact = () => {
     return (
         <StyledContact>
-            <SectionTitle>Contact me</SectionTitle>
-            <StyledFrom>
-                <FormLabel htmlFor="username">Name</FormLabel>
-                <Field/>
-                <FormLabel htmlFor="username">Email</FormLabel>
-                <Field/>
-                <FormLabel htmlFor="username">Message</FormLabel>
-                <Field as={'textarea'}/>
-                <Button type={'submit'} button={'Send'}/>
+            <Container>
+                <SectionTitle>Contact me</SectionTitle>
+                <StyledFrom>
+                    <FormLabel htmlFor="username">Name</FormLabel>
+                    <Field/>
+                    <FormLabel htmlFor="username">Email</FormLabel>
+                    <Field/>
+                    <FormLabel htmlFor="username">Message</FormLabel>
+                    <Field as={'textarea'}/>
+                    <Button type={'submit'} button={'Send'}/>
 
-            </StyledFrom>
+                </StyledFrom>
+            </Container>
+
 
         </StyledContact>
     );
