@@ -7,18 +7,20 @@ export const SectionTitle = styled.h2`
     text-align: center;
     font-family: "Playfair Display", sans-serif;
     font-size: 48px;
-    font-style: normal;
     font-weight: 700;
     line-height: 72px;
+    margin-bottom: 80px;
     
     &::before {
         content: '';
+        display: inline-block;
         width: 100px;
         height: 4px;
-        border: 2px solid ${Theme.colors.accent};
+        background-color: ${Theme.colors.accent};
         position: absolute;
-        top: 70px;
-        right: 565px;
+        left: 50%;
+        bottom: -15%;
+        transform: translateX(-50%);
         
     }
 `

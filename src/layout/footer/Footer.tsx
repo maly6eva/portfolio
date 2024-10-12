@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import vector from "../../assets/images/vector.svg"
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {Theme} from "../../styles/Theme";
 
 export const Footer = () => {
     return (
@@ -35,7 +36,9 @@ export const Footer = () => {
     );
 };
 
-const StyledFooter = styled.footer``
+const StyledFooter = styled.footer`
+    background-color: ${Theme.colors.primaryBg};
+`
 
 const SocialList = styled.ul`
 display: flex;

@@ -22,8 +22,9 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
     width: 15%;
-    margin: 20px 0 120px 0;
+    margin: 20px 0 95px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    //gap: 95px;
 `

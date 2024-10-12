@@ -27,7 +27,7 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
-    margin-top: 145px;
+ 
     min-height: 50vh;
 `
 

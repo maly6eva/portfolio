@@ -6,6 +6,7 @@ export const Theme = {
         title: '#333333',
         spanCl: '#25282B',
         text: '#828282',
-        font: '#25282B'
+        font: '#25282B',
+        primaryBg: '#F9FAFF'
     }
 }

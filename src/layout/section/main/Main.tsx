@@ -35,7 +35,7 @@ export const Main = () => {
 };
 
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -75,11 +75,11 @@ const Yellow = styled.img`
     top: -80px;
     width: 920px;
     height: 830px;
-    z-index: -1;
+    z-index: 0;
 `
 
 const Photo = styled.img`
-    z-index: -1;
+    z-index: 999;
     clip-path: circle(60% at 70% 40%);
    
  

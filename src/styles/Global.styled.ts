@@ -38,4 +38,9 @@ export const GlobalStyled = createGlobalStyle`
         background-color: unset;
         //border: none;
     }
+    
+    section {
+        padding: 150px 0 0;
+        background-color: ${Theme.colors.primaryBg}
+    }
 `
