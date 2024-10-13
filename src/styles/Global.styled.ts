@@ -43,4 +43,13 @@ export const GlobalStyled = createGlobalStyle`
         padding: 150px 0 0;
         background-color: ${Theme.colors.primaryBg}
     }
+    
+
+    //div :nth-of-type(add) {
+    //    border-radius: 30px;
+    //    flex-direction: row-reverse;
+    //    background-color: red;
+    //    
+    //}
+
 `

@@ -7,6 +7,7 @@ export const Theme = {
         spanCl: '#25282B',
         text: '#828282',
         font: '#25282B',
-        primaryBg: '#F9FAFF'
+        primaryBg: '#F9FAFF',
+        secondaryBg: '#ffffff'
     }
 }

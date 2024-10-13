@@ -12,7 +12,7 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
-            <FlexWrapper wrap={'wrap'} justify={'space-between'}>
+            <FlexWrapper wrap={'wrap'} justify={'center'} align={'center'}>
                 <Icon iconId={props.iconId}/>
             </FlexWrapper>
 
@@ -22,9 +22,13 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
     width: 15%;
-    margin: 20px 0 95px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    //gap: 95px;
+    padding: 20px 0 95px 0;
+    
+    &::first-line{
+        content: '';
+        padding: 300px;
+    }
+
+
+
 `

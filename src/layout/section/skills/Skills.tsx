@@ -32,7 +32,6 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    margin: 0 120px;
    
 
 
