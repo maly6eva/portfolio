@@ -4,33 +4,36 @@ import {Icon} from "../../components/icon/Icon";
 import vector from "../../assets/images/vector.svg"
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Theme} from "../../styles/Theme";
+import {Container} from "../../components/Container";
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper direction={'column'} align={'center'}>
-                <SocialList>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon width={'48px'} height={'48px'} viewBox={'0 0 48px 48px'} iconId={'instagram'}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon width={'48px'} height={'48px'} viewBox={'0 0 48px 48px'} iconId={'group'}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon width={'48px'} height={'48px'} viewBox={'0 0 48px 48px'} iconId={'email'}/>
-                        </SocialLink>
-                    </SocialItem>
-                </SocialList>
-                <Copyright>Madelyn Torff 2021 </Copyright>
 
-            </FlexWrapper>
+                <FlexWrapper direction={'column'} align={'center'}>
+                    <SocialList>
+                        <SocialItem>
+                            <SocialLink>
+                                <Icon width={'48px'} height={'48px'} viewBox={'0 0 48px 48px'} iconId={'instagram'}/>
+                            </SocialLink>
+                        </SocialItem>
+                        <SocialItem>
+                            <SocialLink>
+                                <Icon width={'48px'} height={'48px'} viewBox={'0 0 48px 48px'} iconId={'group'}/>
+                            </SocialLink>
+                        </SocialItem>
+                        <SocialItem>
+                            <SocialLink>
+                                <Icon width={'48px'} height={'48px'} viewBox={'0 0 48px 48px'} iconId={'email'}/>
+                            </SocialLink>
+                        </SocialItem>
+                    </SocialList>
+                    <Copyright>Madelyn Torff 2021 </Copyright>
+                </FlexWrapper>
 
-            <FooterImg src={vector} alt=""/>
+                <FooterImg src={vector} alt=""/>
+
+
 
         </StyledFooter>
     );
@@ -38,21 +41,31 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     background-color: ${Theme.colors.primaryBg};
+    padding: 56px 0 0 0;
+   
+    
 `
 
 const SocialList = styled.ul`
 display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
-    
     `
 const SocialItem = styled.li``
 
 
 const SocialLink = styled.a``
 
-const Copyright = styled.small``
+const Copyright = styled.small`
+    font-family: Nunito, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: ${Theme.colors.text};
+    padding-top: 32px;
+`
 
 
 const FooterImg = styled.img`
-width: 100%
+    width: 100%;
 `

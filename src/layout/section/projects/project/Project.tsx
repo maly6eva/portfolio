@@ -9,68 +9,46 @@ type ProjectPropsType = {
     text?: string;
     src?: string;
     button?: string;
-
 }
 
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-            <FlexWrapper direction={'row'} justify={'center'} align={'center'}>
-
-
+            <FlexWrapper justify={'center'} align={'center'}>
                 <ContentText>
                     <ProjectName>{props.name}</ProjectName>
                     <ProjectText>{props.text}</ProjectText>
                     <ProjectButton>{props.button}</ProjectButton>
                 </ContentText>
-
-
                 <Image src={props.src} alt=""/>
-
-
             </FlexWrapper>
-
         </StyledProject>
     );
 };
 
+
+const Image = styled.img`
+    width: 496px;
+    height: 526px;
+    border-radius: 0 30px 30px 0;
+`
+
 const StyledProject = styled.div`
+    &:nth-child(even) {
+        ${FlexWrapper} {
+            flex-direction: row-reverse;
+        };
 
-
-
-
+        ${Image} {
+            
+        }
+    }
     ${FlexWrapper} {
         width: 100%;
         border-radius: 30px;
         background-color: ${Theme.colors.secondaryBg};
-        //flex-direction: row-reverse;
-
-        & :nth-child(add) {
-            
-            flex-direction: row-reverse;
-            background-color: red;
-           
-
-        }
-
-             &:nth-child(add) {
-                 flex-direction: row-reverse;
-                 background-color: red
     }
-
 `
-
-
-// const ContentProject = styled.div`
-//     display: flex;
-//     border-radius: 30px;
-//
-//     &:nth-of-type(add) {
-//         flex-direction: row-reverse;
-//         background-color: red
-//
-//     }
-// `
 
 const ProjectName = styled.h3`
     font-family: "Playfair Display", sans-serif;
@@ -84,31 +62,19 @@ const ProjectText = styled.p`
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
-    padding: 24px 0 ;
+    padding: 24px 0;
 `
-
-
 const ProjectButton = styled.button`
-   width: 38%;
+    width: 38%;
     padding: 8px 0;
     border-radius: 24px;
     font-family: Roboto, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 150%;
-
-
 `
 
-const Image = styled.img`
-    width: 496px;
-    height: 526px;
-    border-radius: 0 30px 30px 0;
-    
 
-    
-
-`
 
 const ContentText = styled.div`
     width: 496px;

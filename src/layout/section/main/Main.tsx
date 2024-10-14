@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from "./Button";
+import {Button} from "../../../components/SuperButton/Button";
 import {Icon} from "../../../components/icon/Icon";
 import ksenia from "../../../assets/images/ksenia.webp"
 import yellow from "../../../assets/images/yellow.svg"
@@ -19,17 +19,15 @@ export const Main = () => {
                         <MainText>Short text with details about you, what you do or your professional career. You can
                             add more
                             information on the about page.</MainText>
-                        <Button button={'Projects'}/>
-                        <Button button={'LinkedIn'}/>
+                        <Button>Projects</Button>
+                        <Button>LinkedIn</Button>
                     </div>
-                    {/*<Icon iconId={'yellow-bg'} width="720" height="629" viewBox="0 0 720 629"/>*/}
                     <Yellow src={yellow} alt=""/>
                     <PhotoWrapper>
                         <Photo src={ksenia} alt=""/>
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>
-
         </StyledMain>
     );
 };
@@ -81,13 +79,13 @@ const Yellow = styled.img`
 const Photo = styled.img`
     z-index: 999;
     clip-path: circle(60% at 70% 40%);
-   
- 
+
+
 `
 const PhotoWrapper = styled.div`
     position: relative;
-    
-    
+
+
     &::before {
         content: '';
         width: 512px;
@@ -96,13 +94,11 @@ const PhotoWrapper = styled.div`
         direction: rtl;
         border-radius: 10% 30% 50% 70%;
         z-index: 999;
-        
-        
+
         position: absolute;
         top: -65px;
         left: 20px;
         right: 120px;
-        
     }
 `
 
