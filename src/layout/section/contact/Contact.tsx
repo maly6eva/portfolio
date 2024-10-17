@@ -17,7 +17,7 @@ export const Contact = () => {
                     <Field/>
                     <FormLabel htmlFor="username">Message</FormLabel>
                     <Field as={'textarea'}/>
-                    <Button type={'submit'}>Submit</Button>
+                    <Button type={'submit'}>Send</Button>
                 </StyledFrom>
             </Container>
         </StyledContact>
@@ -42,7 +42,12 @@ const StyledFrom = styled.form`
     };
 
     ${StyledButton} {
-       background-color: red; 
+       background-color: ${Theme.colors.accent}; 
+        align-self: end;
+        border: none;
+        border-radius: 8px;
+
+       
     }
 `
 

@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {AnchorHTMLAttributes, DetailedHTMLProps} from 'react';
 import sprite from "../../assets/images/sprite.svg";
+import {CSSObject, InterpolationFunction} from "styled-components";
 
 
 type IconPropsType = {
+    first?: TemplateStringsArray | CSSObject;
     iconId?: string;
     width?: string;
     height?: string;
     viewBox?: string;
-
 }
 
 
@@ -18,3 +19,5 @@ export const Icon = (props: IconPropsType) => {
         </svg>
     )
 }
+
+

@@ -12,7 +12,7 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
-            <FlexWrapper wrap={'wrap'} justify={'center'} align={'center'}>
+            <FlexWrapper justify={'center'} align={'center'}>
                 <Icon iconId={props.iconId}/>
             </FlexWrapper>
 
@@ -23,6 +23,7 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
     width: 15%;
     padding: 20px 0 95px 0;
+
     
     &::first-line{
         content: '';

@@ -29,7 +29,5 @@ export const StyledButton = styled.button`
     line-height: 150%;
     color: ${Theme.colors.spanCl};
     
-    &:hover {
-        background-color: ${Theme.colors.accent};
-    }
+   
 `

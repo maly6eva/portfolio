@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from "../../../components/SuperButton/Button";
+import {Button, StyledButton} from "../../../components/SuperButton/Button";
 import {Icon} from "../../../components/icon/Icon";
 import ksenia from "../../../assets/images/ksenia.webp"
 import yellow from "../../../assets/images/yellow.svg"
@@ -13,19 +13,22 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
-                    <div>
+                    <ContainMain>
                         <MainTitle>Software Developer</MainTitle>
                         <MainName>Hello, my name is Ksenia Malysheva</MainName>
                         <MainText>Short text with details about you, what you do or your professional career. You can
                             add more
                             information on the about page.</MainText>
-                        <Button>Projects</Button>
-                        <Button>LinkedIn</Button>
-                    </div>
-                    <Yellow src={yellow} alt=""/>
-                    <PhotoWrapper>
-                        <Photo src={ksenia} alt=""/>
-                    </PhotoWrapper>
+                        <StyledButton>Projects</StyledButton>
+                        <StyledButton>LinkedIn</StyledButton>
+                    </ContainMain>
+                    <ContainPhoto>
+                        <Yellow src={yellow} alt=""/>
+                        <PhotoWrapper>
+                            <Photo src={ksenia} alt=""/>
+                        </PhotoWrapper>
+                    </ContainPhoto>
+
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -38,6 +41,27 @@ const StyledMain = styled.section`
     position: relative;
     display: flex;
 `
+
+const ContainMain = styled.div`
+    flex-wrap: wrap;
+    padding-top: 50px;
+    ${StyledButton} {
+        &:hover {
+            background-color: ${Theme.colors.accent};
+        }
+    }
+
+    @media ${Theme.media.maxWidth} {
+        width: 100%;
+        padding-top: 450px;
+
+    }
+}
+
+`
+
+
+
 
 const MainTitle = styled.h1`
     font-family: Nunito, sans-serif;
@@ -67,18 +91,64 @@ const MainText = styled.p`
     color: ${Theme.colors.text};
     padding: 32px 0;
 `
+
+const ContainPhoto = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 720px;
+    height: 629px;
+
+ 
+`
 const Yellow = styled.img`
     position: absolute;
     right: 0;
-    top: -80px;
+    top: -120px;
     width: 920px;
     height: 830px;
     z-index: 0;
+    flex-shrink: 5;
+    flex-grow: 2;
+    background-size: cover;
+    @media ${Theme.media.tab} {
+        max-width: 600px;
+        min-height: 390px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+
+    @media ${Theme.media.mobile} {
+        top: -220px;
+        width: 100%;
+        max-width: 550px;
+        min-height: 390px;
+    }
 `
 
 const Photo = styled.img`
-    z-index: 999;
+    position: absolute;
+    z-index: -10;
     clip-path: circle(60% at 70% 40%);
+    flex-wrap: wrap-reverse;
+    //background-size: cover;
+   
+    @media ${Theme.media.tab} {
+        width: 100%;
+        max-width: 450px;
+        min-height: 390px;
+        margin-bottom: 50px;
+
+    
+        
+       
+    }
+    @media ${Theme.media.mobile} {
+        
+        width: 100%;
+        
+        height: 390px;
+    }
 
 
 `
@@ -93,13 +163,22 @@ const PhotoWrapper = styled.div`
         border: 40px dotted ${Theme.colors.accent};
         direction: rtl;
         border-radius: 10% 30% 50% 70%;
-        z-index: 999;
+        z-index: 0;
 
         position: absolute;
         top: -65px;
         left: 20px;
         right: 120px;
+        @media ${Theme.media.tab} {
+            width: 100%;
+            max-width: 450px;
+            min-height: 390px;
+
+        }
     }
+
+
+
 `
 
 

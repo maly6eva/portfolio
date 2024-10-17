@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Theme} from "../../../../styles/Theme";
+import {StyledButton} from "../../../../components/SuperButton/Button";
 
 
 type ProjectPropsType = {
@@ -18,7 +19,7 @@ export const Project = (props: ProjectPropsType) => {
                 <ContentText>
                     <ProjectName>{props.name}</ProjectName>
                     <ProjectText>{props.text}</ProjectText>
-                    <ProjectButton>{props.button}</ProjectButton>
+                    <StyledButton>{props.button}</StyledButton>
                 </ContentText>
                 <Image src={props.src} alt=""/>
             </FlexWrapper>
@@ -40,7 +41,7 @@ const StyledProject = styled.div`
         };
 
         ${Image} {
-            
+            border-radius:  30px 0 0 30px;
         }
     }
     ${FlexWrapper} {
@@ -64,17 +65,6 @@ const ProjectText = styled.p`
     line-height: 150%;
     padding: 24px 0;
 `
-const ProjectButton = styled.button`
-    width: 38%;
-    padding: 8px 0;
-    border-radius: 24px;
-    font-family: Roboto, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 150%;
-`
-
-
 
 const ContentText = styled.div`
     width: 496px;
@@ -83,4 +73,9 @@ const ContentText = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 160px 38px 160px 50px;
+
+    ${StyledButton}{
+        width: 38%;
+        border-radius: 24px;
+    }
 `

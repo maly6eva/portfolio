@@ -32,12 +32,13 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-   
 
 
-    min-height: 514px;
-    
-  
+
+    //min-height: 514px;
+    ${Container} {
+        
+    }
 `
 
 

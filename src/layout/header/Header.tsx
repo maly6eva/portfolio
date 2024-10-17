@@ -1,17 +1,23 @@
 import React from 'react';
 import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
+import {Theme} from "../../styles/Theme";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {MobileMenu} from "./mobileMenu/MobileMenu";
 
+
+
+const items = ['About', 'Projects', 'Contacts']
 export const Header = () => {
     return (
         <StyledHeader>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
                     <Logo/>
-                    <Menu/>
+                    <HeaderMenu menuItems={items}/>
+                    <MobileMenu menuItems={items}/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -24,6 +30,11 @@ const StyledHeader = styled.header`
     position: absolute;
     z-index: 1;
     width: 100%;
+
+    
+  
 `
+
+
 
 

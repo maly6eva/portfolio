@@ -9,8 +9,8 @@ import {Container} from "../../components/Container";
 export const Footer = () => {
     return (
         <StyledFooter>
-
-                <FlexWrapper direction={'column'} align={'center'}>
+            <Container>
+                <FlexWrapper direction={'column'} align={'center'} justify={'center'}>
                     <SocialList>
                         <SocialItem>
                             <SocialLink>
@@ -30,6 +30,9 @@ export const Footer = () => {
                     </SocialList>
                     <Copyright>Madelyn Torff 2021 </Copyright>
                 </FlexWrapper>
+            </Container>
+
+
 
                 <FooterImg src={vector} alt=""/>
 
@@ -42,30 +45,54 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
     background-color: ${Theme.colors.primaryBg};
     padding: 56px 0 0 0;
-   
+    position: relative;
     
+    ${Container} {
+        
+    
+    }
 `
 
 const SocialList = styled.ul`
-display: flex;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 56px 0 32px 0;
+    
+  
+`
+const SocialItem = styled.li`
+    z-index: 9;
+    align-self: center;
+  
+`
+
+
+const SocialLink = styled.a`
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
-    `
-const SocialItem = styled.li``
-
-
-const SocialLink = styled.a``
+    color: ${Theme.colors.font};
+    
+    &:hover{
+        color: ${Theme.colors.text};
+        transform: translateY(-4px);
+    }
+`
 
 const Copyright = styled.small`
     font-family: Nunito, sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: ${Theme.colors.text};
-    padding-top: 32px;
+    z-index: 9;
 `
-
 
 const FooterImg = styled.img`
     width: 100%;
+    position: absolute;
+    top: 100px;
+    background-color: ${Theme.colors.primaryBg};
+
+    // z-index: -3;
 `

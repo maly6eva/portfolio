@@ -9,5 +9,14 @@ export const Theme = {
         font: '#25282B',
         primaryBg: '#F9FAFF',
         secondaryBg: '#ffffff'
+    },
+
+
+    media: {
+        tablet: 'screen and (min-width: 768px)',
+        tab: 'screen and (max-width: 828px)',
+        maxWidth: 'screen and (max-width: 1280px)',
+        mobile: 'screen and (max-width: 576px)',
+        minWidth: 'screen and (max-width: 300px)'
     }
 }
