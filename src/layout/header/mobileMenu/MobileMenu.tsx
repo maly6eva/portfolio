@@ -60,6 +60,7 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
 
         @media ${Theme.media.tablet} {
             display: none;
+            
         }
     }
    
@@ -114,6 +115,14 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
                 transform: rotate(45deg) translateY(0);
             `}
         }
+
+
+   
+    }
+
+    @media ${Theme.media.tab} {
+        //right: 200px;
+
     }
 `
 

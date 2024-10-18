@@ -4,7 +4,7 @@ import {Theme} from "../../styles/Theme";
 
 export const Logo = () => {
     return (
-        <Name href="">Ksenia Malusheva
+        <Name href="">Ksenia Malysheva
         </Name>
     );
 };

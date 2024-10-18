@@ -7,12 +7,13 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {Theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
+                <FlexWrapper align={"center"} justify={"space-between"} wrap={'reverse-wrap'}>
                     <ContainMain>
                         <MainTitle>Software Developer</MainTitle>
                         <MainName>Hello, my name is Ksenia Malysheva</MainName>
@@ -37,32 +38,35 @@ export const Main = () => {
 
 
 const StyledMain = styled.section`
-    min-height: 100vh;
     position: relative;
     display: flex;
+    min-height: 100vh;
+   
 `
 
 const ContainMain = styled.div`
+    position: absolute;
     flex-wrap: wrap;
-    padding-top: 50px;
+    top: 450px;
+    width: 510px;
+    
+    
     ${StyledButton} {
         &:hover {
             background-color: ${Theme.colors.accent};
         }
     }
-
-    @media ${Theme.media.maxWidth} {
-        width: 100%;
-        padding-top: 450px;
-
-    }
 }
 
+
+@media ${Theme.media.tab} {
+
+    top: 600px;
+
+
+
+}
 `
-
-
-
-
 const MainTitle = styled.h1`
     font-family: Nunito, sans-serif;
     font-size: 20px;
@@ -73,12 +77,8 @@ const MainTitle = styled.h1`
 `
 
 const MainName = styled.h2`
-    font-family: Roboto, sans-serif;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
+    ${font({family: 'Roboto, sans-serif', weight: 700, Fmax: 64, Fmin: 42, color: Theme.colors.title})}
     line-height: 120%;
-    color: ${Theme.colors.title};
     padding-top: 12px;
 `
 
@@ -93,92 +93,60 @@ const MainText = styled.p`
 `
 
 const ContainPhoto = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    width: 720px;
-    height: 629px;
-
- 
 `
+
+const PhotoWrapper = styled.div`
+
+`
+
 const Yellow = styled.img`
     position: absolute;
+    background-size: contain;
+    top: -220px;
     right: 0;
-    top: -120px;
-    width: 920px;
-    height: 830px;
+    max-width: 780px;
+    min-height: 880px;
+    width: 100%;
     z-index: 0;
-    flex-shrink: 5;
-    flex-grow: 2;
-    background-size: cover;
+    
     @media ${Theme.media.tab} {
-        max-width: 600px;
-        min-height: 390px;
         width: 100%;
-        margin-bottom: 50px;
     }
-
-
+    
     @media ${Theme.media.mobile} {
-        top: -220px;
         width: 100%;
-        max-width: 550px;
-        min-height: 390px;
     }
+    
 `
-
 const Photo = styled.img`
     position: absolute;
-    z-index: -10;
-    clip-path: circle(60% at 70% 40%);
-    flex-wrap: wrap-reverse;
-    //background-size: cover;
-   
-    @media ${Theme.media.tab} {
-        width: 100%;
-        max-width: 450px;
-        min-height: 390px;
-        margin-bottom: 50px;
-
+    background-size: contain;
+ 
+    min-height:  612px;
+    max-width: 410px;
+    width: 100%;
+    right: 250px;
+ 
+    top: 150px;
     
-        
-       
-    }
-    @media ${Theme.media.mobile} {
-        
-        width: 100%;
-        
-        height: 390px;
-    }
-
-
-`
-const PhotoWrapper = styled.div`
-    position: relative;
-
-
-    &::before {
-        content: '';
-        width: 512px;
-        height: 642px;
-        border: 40px dotted ${Theme.colors.accent};
-        direction: rtl;
-        border-radius: 10% 30% 50% 70%;
-        z-index: 0;
-
-        position: absolute;
-        top: -65px;
-        left: 20px;
-        right: 120px;
-        @media ${Theme.media.tab} {
-            width: 100%;
-            max-width: 450px;
-            min-height: 390px;
-
-        }
-    }
-
-
-
+    clip-path: circle(60% at 70% 40%);
+    object-fit: cover;
+    
+     @media ${Theme.media.tab} {
+         min-height:  450px;
+         max-width: 395px;
+         right: 0px;
+         left: 200px;
+ 
+     }
+    
+     @media ${Theme.media.mobile} {
+         min-height:  400px;
+         max-width: 345px;
+         right: 0px;
+         left: 25px;
+         width: 100%;
+     }
 `
 
 
