@@ -13,7 +13,7 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <FlexWrapper direction={'column'} align={'center'} justify={'space-between'} gap={'78px'}>
+                <FlexWrapper direction={'column'} align={'center'} gap={'78px'}>
                     <Project name={'Project Name'}
                              text={'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.'}
                              src={gerl} button={'View Project'}/>
@@ -32,8 +32,9 @@ export const Projects = () => {
 const StyledProjects = styled.section`
     min-height: 100vh;
 
+  
     ${FlexWrapper} {
-
+        
     }
 `
 

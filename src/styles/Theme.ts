@@ -15,7 +15,8 @@ export const Theme = {
     media: {
         tablet: 'screen and (min-width: 768px)',
         tab: 'screen and (max-width: 768px)',
-        contentText: 'screen and (max-width: 1180x)',
+        contText: 'screen and (max-width: 1280px)',
+        contProject: 'screen and (max-width: 925px)',
 
         mobile: 'screen and (max-width: 576px)',
         minWidth: 'screen and (max-width: 300px)'

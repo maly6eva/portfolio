@@ -16,7 +16,7 @@ export const Main = () => {
                 <FlexWrapper align={"center"} justify={"space-between"} wrap={'reverse-wrap'}>
                     <ContainMain>
                         <MainTitle>Software Developer</MainTitle>
-                        <MainName>Hello, my name is Ksenia Malysheva</MainName>
+                        <MainName>Hello, my name is <span> Ksenia Malysheva</span></MainName>
                         <MainText>Short text with details about you, what you do or your professional career. You can
                             add more
                             information on the about page.</MainText>
@@ -47,8 +47,7 @@ const StyledMain = styled.section`
 const ContainMain = styled.div`
     position: absolute;
     flex-wrap: wrap;
-    top: 450px;
-    width: 510px;
+    width: 610px;
     
     
     ${StyledButton} {
@@ -59,12 +58,13 @@ const ContainMain = styled.div`
 }
 
 
-@media ${Theme.media.tab} {
-
+@media ${Theme.media.contText} {
+    top: 700px;
+    width: 100%;
+}
+@media ${Theme.media.mobile} {
     top: 600px;
-
-
-
+    width: 100%;
 }
 `
 const MainTitle = styled.h1`
@@ -80,6 +80,11 @@ const MainName = styled.h2`
     ${font({family: 'Roboto, sans-serif', weight: 700, Fmax: 64, Fmin: 42, color: Theme.colors.title})}
     line-height: 120%;
     padding-top: 12px;
+    
+    span{
+        white-space: nowrap;   
+    }
+   
 `
 
 const MainText = styled.p`
@@ -126,26 +131,27 @@ const Photo = styled.img`
     max-width: 410px;
     width: 100%;
     right: 250px;
- 
     top: 150px;
     
     clip-path: circle(60% at 70% 40%);
     object-fit: cover;
+
     
      @media ${Theme.media.tab} {
-         min-height:  450px;
-         max-width: 395px;
+         min-height:  550px;
+         max-width: 440px;
          right: 0px;
-         left: 200px;
- 
+         left: 150px;
+         width: 100%;
      }
     
      @media ${Theme.media.mobile} {
          min-height:  400px;
          max-width: 345px;
          right: 0px;
-         left: 25px;
+         left: 20px;
          width: 100%;
+         top: 200px;
      }
 `
 

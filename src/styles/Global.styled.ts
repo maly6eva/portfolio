@@ -42,7 +42,11 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     section {
-        padding: 150px 0 0;
-        background-color: ${Theme.colors.primaryBg}
+        padding: 140px 0 0;
+        background-color: ${Theme.colors.primaryBg};
+
+        @media ${Theme.media.mobile} {
+            padding: 80px 0 0;
+        }
     }
 `

@@ -12,7 +12,7 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
-                <FlexWrapper wrap={'wrap'} align={'center'} justify={'space-between'} >
+                <FlexWrapper wrap={'wrap'} justify={'space-between'} align={'center'}>
                     <Skill iconId={'vscode'}/>
                     <Skill iconId={'js'}/>
                     <Skill iconId={'css'}/>
@@ -33,10 +33,22 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
 
+    @media ${Theme.media.contText}{
+        margin-top: 140px;
+    }
+    
+    @media ${Theme.media.mobile}{
+        margin-top: 90px;
+
+    }
+    
+
 
 
     //min-height: 514px;
-    ${Container} {
+    ${SectionTitle} {
+        margin-bottom: 0;
+       
         
     }
 `
