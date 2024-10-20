@@ -31,29 +31,35 @@ export const Project = (props: ProjectPropsType) => {
 const Image = styled.img`
     max-width: 496px;
     width: 100%;
-    height: 526px;
+    height: 524px;
     border-radius: 0 30px 30px 0;
     object-fit: cover;
-    
-   
-    
 `
 
 const StyledProject = styled.div`
     max-width: 990px;
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    align-content: center;
 
     &:nth-child(even) {
         ${FlexWrapper} {
             flex-direction: row-reverse;
-
         }
-    ;
 
         ${Image} {
             border-radius: 30px 0 0 30px;
 
+            @media ${Theme.media.tab} {
+                max-width: 340px;
+                width: 100%;
+                height: 526px;
+                border-radius: 30px 30px 0 0;
+            }
         }
     }
 
@@ -63,14 +69,14 @@ const StyledProject = styled.div`
     }
 }
 
-
-
-@media ${Theme.media.contProject}{
+@media ${Theme.media.contProject} {
     max-width: 790px;
     width: 100%;
+    flex-wrap: wrap-reverse;
+    align-content: center;
 
     ${Image} {
-        max-width: 396px;
+        max-width: 400px;
         width: 100%;
         height: 426px;
     }
@@ -78,9 +84,30 @@ const StyledProject = styled.div`
     ${FlexWrapper} {
         max-width: 790px;
         width: 100%;
-
+        height: 426px;
     }
+}
+
+@media ${Theme.media.tab} {
     
+    ${FlexWrapper} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        align-content: center;
+
+        max-width: 340px;
+        width: 100%;
+        height: 950px;
+    }
+
+    ${Image} {
+        max-width: 340px;
+        width: 100%;
+        height: 526px;
+        border-radius: 30px 30px 0 0;
+    }
 }
 `
 const ContentText = styled.div`
@@ -90,9 +117,8 @@ const ContentText = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 160px 38px 160px 50px;
-    flex-shrink: 2;
 
-    ${StyledButton}{
+    ${StyledButton} {
         max-width: 155px;
         height: 45px;
         width: 100%;
@@ -105,7 +131,6 @@ const ProjectName = styled.h3`
     font-size: 40px;
     font-weight: 700;
     line-height: 150%;
-    
 `
 
 const ProjectText = styled.p`

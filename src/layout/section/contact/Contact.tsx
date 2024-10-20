@@ -46,8 +46,10 @@ const StyledFrom = styled.form`
         align-self: end;
         border: none;
         border-radius: 8px;
-
-       
+    }
+    
+    @media ${Theme.media.mobile} {
+        max-width: 345px;
     }
 `
 

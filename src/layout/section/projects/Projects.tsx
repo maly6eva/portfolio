@@ -31,10 +31,5 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     min-height: 100vh;
-
-  
-    ${FlexWrapper} {
-        
-    }
 `
 

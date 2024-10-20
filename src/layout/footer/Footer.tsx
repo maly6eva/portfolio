@@ -24,7 +24,7 @@ export const Footer = () => {
                         </SocialItem>
                         <SocialItem>
                             <SocialLink>
-                                <Icon width={'48px'} height={'48px'} viewBox={'0 0 48px 48px'} iconId={'email'}/>
+                                <Icon width={'48px'} height={'48px'} viewBox={'0 0 48px 48px'} iconId={'linked'}/>
                             </SocialLink>
                         </SocialItem>
                     </SocialList>

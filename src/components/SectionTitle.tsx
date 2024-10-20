@@ -11,6 +11,8 @@ export const SectionTitle = styled.h2`
     margin-bottom: 80px;
     position: relative;
 
+
+ 
     &::before {
         content: '';
         display: inline-block;
@@ -21,13 +23,13 @@ export const SectionTitle = styled.h2`
         left: 50%;
         bottom: -15%;
         transform: translateX(-50%);
-
-        @media ${Theme.media.mobile} {
-          
-        }
-
+        
         @media ${Theme.media.contText} {
             padding: 0;
         }
     }
+    // @media ${Theme.media.tab} {
+    //     margin-bottom: 50px;
+    // }
+  
 `
