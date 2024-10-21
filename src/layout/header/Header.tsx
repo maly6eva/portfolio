@@ -3,7 +3,6 @@ import {Logo} from "../../components/logo/Logo";
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
-import {Theme} from "../../styles/Theme";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 import {MobileMenu} from "./mobileMenu/MobileMenu";
 
@@ -24,15 +23,11 @@ export const Header = () => {
     );
 };
 
-
 const StyledHeader = styled.header`
     padding-top: 14px;
     position: absolute;
     z-index: 1;
     width: 100%;
-
-    
-  
 `
 
 

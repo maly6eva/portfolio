@@ -1,6 +1,6 @@
-import React, {AnchorHTMLAttributes, DetailedHTMLProps} from 'react';
+import React from 'react';
 import sprite from "../../assets/images/sprite.svg";
-import {CSSObject, InterpolationFunction} from "styled-components";
+import {CSSObject} from "styled-components";
 
 
 type IconPropsType = {
@@ -10,7 +10,6 @@ type IconPropsType = {
     height?: string;
     viewBox?: string;
 }
-
 
 export const Icon = (props: IconPropsType) => {
     return (

@@ -25,7 +25,7 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
-    
+
 `
 
 const StyledFrom = styled.form`
@@ -39,15 +39,15 @@ const StyledFrom = styled.form`
     textarea {
         resize: none;
         height: 160px;
-    };
+    }
 
     ${StyledButton} {
-       background-color: ${Theme.colors.accent}; 
+        background-color: ${Theme.colors.accent};
         align-self: end;
         border: none;
         border-radius: 8px;
     }
-    
+
     @media ${Theme.media.mobile} {
         max-width: 345px;
     }
@@ -65,7 +65,5 @@ const Field = styled.input`
     &:focus-visible {
         outline: 1px solid ${Theme.colors.accent}
     }
-    
-  
 `
 

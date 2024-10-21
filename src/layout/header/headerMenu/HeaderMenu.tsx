@@ -2,9 +2,7 @@ import {Theme} from "../../../styles/Theme";
 import styled from "styled-components";
 
 
-
-
-export const HeaderMenu = (props: {menuItems: Array<string>}) => {
+export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledHeaderMenu>
             <ul>
@@ -19,19 +17,19 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
 };
 
 
-const StyledHeaderMenu = styled.nav`  
-    ul{
+const StyledHeaderMenu = styled.nav`
+    ul {
         display: flex;
         gap: 48px;
-        
+
         @media ${Theme.media.tab} {
             display: none;
         }
     }
 `
 
-const ListItem = styled.li` 
-    
+const ListItem = styled.li`
+
 `
 
 const Link = styled.a`

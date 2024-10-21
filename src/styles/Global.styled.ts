@@ -30,7 +30,7 @@ export const GlobalStyled = createGlobalStyle`
         text-decoration: none;
         cursor: pointer;
     }
-
+    
     ul {
         list-style: none;
     }
@@ -38,7 +38,6 @@ export const GlobalStyled = createGlobalStyle`
     button {
         background-color: unset;
         cursor: pointer;
-        //border: none;
     }
 
     section {

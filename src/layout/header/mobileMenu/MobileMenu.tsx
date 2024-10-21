@@ -2,15 +2,12 @@ import {Theme} from "../../../styles/Theme";
 import styled, {css} from "styled-components";
 
 
-
-
-export const MobileMenu = (props: {menuItems: Array<string>}) => {
+export const MobileMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledHeaderMenu>
             <BurgerButton isOpen={false}>
                 <span></span>
             </BurgerButton>
-
             <MobileMenuPopup isOpen={false}>
                 <ul>
                     {props.menuItems.map((item, index) => {
@@ -20,7 +17,6 @@ export const MobileMenu = (props: {menuItems: Array<string>}) => {
                     })}
                 </ul>
             </MobileMenuPopup>
-
         </StyledHeaderMenu>
     );
 };
@@ -28,13 +24,11 @@ export const MobileMenu = (props: {menuItems: Array<string>}) => {
 
 const StyledHeaderMenu = styled.nav`
     
-
     @media ${Theme.media.tablet} {
         display: none;
     }
 `
-
-const MobileMenuPopup = styled.div<{isOpen: boolean}>`
+const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
     top: 0;
     left: 10px;
@@ -43,9 +37,8 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     z-index: 9;
     background-color: rgba(31, 31, 32, 0.3);
     display: none;
-  
     
-    ${props => props.isOpen && css<{isOpen: boolean}>`
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
         justify-content: center;
         align-items: center;
@@ -60,13 +53,11 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
 
         @media ${Theme.media.tablet} {
             display: none;
-            
         }
     }
-   
 `
 
-const BurgerButton = styled.button<{isOpen: boolean}>`
+const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
     top: -100px;
     right: -100px;
@@ -83,11 +74,11 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         position: absolute;
         left: 40px;
         bottom: 60px;
-
-
+        
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: darkred;
         `}
+        
         &::before {
             content: '';
             display: block;
@@ -115,22 +106,12 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
                 transform: rotate(45deg) translateY(0);
             `}
         }
-
-
-   
-    }
-
-    @media ${Theme.media.tab} {
-        //right: 200px;
-
     }
 `
 
-const ListItem = styled.li` 
-
+const ListItem = styled.li`
     
 `
-
 const Link = styled.a`
     font-family: Raleway, sans-serif;
     font-size: 18px;

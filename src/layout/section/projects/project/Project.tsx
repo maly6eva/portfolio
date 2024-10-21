@@ -27,7 +27,6 @@ export const Project = (props: ProjectPropsType) => {
     );
 };
 
-
 const Image = styled.img`
     max-width: 496px;
     width: 100%;
@@ -89,14 +88,13 @@ const StyledProject = styled.div`
 }
 
 @media ${Theme.media.tab} {
-    
+
     ${FlexWrapper} {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap-reverse;
         align-content: center;
-
         max-width: 340px;
         width: 100%;
         height: 950px;

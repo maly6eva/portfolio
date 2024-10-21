@@ -9,7 +9,6 @@ type ButtonPropsType = {
     align?: string | undefined
 }
 
-
 export const Button = (props: ButtonPropsType) => {
     return (
         <StyledButton type={props.type}>
@@ -28,6 +27,4 @@ export const StyledButton = styled.button`
     font-weight: 500;
     line-height: 150%;
     color: ${Theme.colors.spanCl};
-    
-   
 `
