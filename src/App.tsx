@@ -13,7 +13,7 @@ import {Designs} from "./layout/section/designs/Designs";
 function App() {
     return (
         <StylledSection>
-            <Designs/>
+            {/*<Designs/>*/}
                 <Header/>
                 <Main/>
                 <Skills/>
