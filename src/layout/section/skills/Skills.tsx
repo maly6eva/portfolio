@@ -31,6 +31,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
+  
     
     @media ${Theme.media.contText} {
         margin-top: 140px;
