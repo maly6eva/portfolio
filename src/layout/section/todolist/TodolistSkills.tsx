@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import {TodolistPropsType} from "./Todolist";
 
 
 type TodolistSkillsPropsType = {
-    id: number,
+    id: string,
     isDone: boolean,
     text: string,
 }
@@ -12,12 +12,28 @@ type TodolistSkillsPropsType = {
 type TodolistSkillsProps = {
     title: string;
     tasks: TodolistSkillsPropsType[]
-    deliteTasks: (id: number) => void
+    deliteTasks: (id: string) => void
     filterState: (value: TodolistPropsType) => void
+    taskPush: (taskId: string) => void
 
 }
 
-export const TodolistSkills = ({title, tasks, deliteTasks, filterState}: TodolistSkillsProps) => {
+export const TodolistSkills = ({title, tasks, deliteTasks, filterState, taskPush}: TodolistSkillsProps) => {
+    const [bool, setBool] = useState(true);
+    const [newTaskText, setNewTaskText] = useState('');
+
+    const newTaskTextRex = () => {
+        if(newTaskText.trim() !== ''){
+            taskPush(newTaskText)
+            setNewTaskText('')
+        }
+    }
+    const del = () => {
+    setBool(!bool)
+    }
+
+
+
     const task = tasks.map((el) => {
         return (
             <li>
@@ -25,16 +41,13 @@ export const TodolistSkills = ({title, tasks, deliteTasks, filterState}: Todolis
                 <ButtonClik onClick={() => {deliteTasks(el.id)}}>+</ButtonClik>
             </li>
         )
-
     })
-
     return (
-
         <TodoSkillslist>
             <h3>{title}</h3>
             <div>
-                <input/>
-                <ButtonClik>+</ButtonClik>
+                <input value={newTaskText} onChange={(e) => setNewTaskText(e.currentTarget.value)}/>
+                <ButtonClik onClick={() => {newTaskTextRex()}}>+</ButtonClik>
             </div>
             <ul>
                 {task}
@@ -44,6 +57,9 @@ export const TodolistSkills = ({title, tasks, deliteTasks, filterState}: Todolis
                 <button onClick={() => {filterState('Active')}}>Active</button>
                 <button onClick={() => {filterState('Completed')}}>Completed</button>
             </ButtonDiv>
+            <div>
+                <button onClick={() => {del()}}>{bool ? 'Открыть!' : 'Закрыть!'}</button>
+            </div>
         </TodoSkillslist>
     );
 };

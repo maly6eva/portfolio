@@ -8,6 +8,8 @@ import {Contact} from "./layout/section/contact/Contact";
 import {Footer} from "./layout/footer/Footer";
 import {Designs} from "./layout/section/designs/Designs";
 import {Todolist} from "./layout/section/todolist/Todolist";
+import {City} from "./layout/city/City";
+import {NewCity} from "./layout/city/NewCity";
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
             <Todolist/>
             <Skills/>
             <Projects/>
+            <NewCity/>
             <Contact/>
             <Footer/>
         </StylledSection>
